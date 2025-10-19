@@ -179,3 +179,38 @@ Default port is 3000, configurable via `PORT` environment variable:
 ```bash
 PORT=8080 npm start
 ```
+
+## Deployment
+
+### GitHub Pages Deployment
+
+The app is configured to automatically deploy to GitHub Pages on every push to the `main` branch.
+
+**Setup Steps:**
+
+1. **Enable GitHub Pages in repository settings:**
+   - Go to repository Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Push to main branch:**
+   ```bash
+   git push origin main
+   ```
+
+3. **Monitor deployment:**
+   - Check the "Actions" tab in GitHub to see deployment progress
+   - Once complete, the app will be available at: `https://<username>.github.io/<repository-name>/`
+
+**How it works:**
+- The `.github/workflows/deploy.yml` workflow automatically deploys `webapp/public/` to GitHub Pages
+- The `.nojekyll` file prevents Jekyll processing of static assets
+- All paths are relative, so the app works in any subdirectory
+
+**Local Testing:**
+You can test the static site locally without the Express server by using any static file server:
+```bash
+cd webapp/public
+python3 -m http.server 8000
+# Or using Node.js
+npx http-server -p 8000
+```
