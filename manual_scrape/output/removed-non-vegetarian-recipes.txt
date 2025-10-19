@@ -1,0 +1,86 @@
+NON-VEGETARIAN RECIPES REMOVED FROM WEBAPP
+===========================================
+
+Total Removed: 46 recipes
+Remaining Vegetarian: 204 recipes
+
+REMOVED BY CATEGORY:
+--------------------
+
+Health Plus (9 removed):
+  HP3 - Lemon Chicken
+  HP4 - Machi Kali Mirch
+  HP13 - Fish Bharta
+  HP17 - Fish Cutlet
+  HP18 - Fish Masala
+  HP1G - Fish Pulusu
+  HPzO - Coconut Prawns
+  HPz1 - Crab Curry
+  HPzz - Mase Kallavan
+
+Bakery (8 removed):
+  bAz - Muffins (contains egg)
+  bA3 - Walnut Cake (contains egg)
+  bA4 - Carrot Cake (contains egg)
+  bAs - Chocolate Cake (contains egg)
+  bA7 - Lamington Cake (contains egg)
+  bA8 - Apple cup Cakes (contains egg)
+  bAQ - Eggless Chocolate Cake (contains egg)
+  bA1O - Vanilla Cake (contains egg)
+
+Continental (8 removed):
+  Co4 - Lasaneya (contains egg)
+  Co6 - Thai Chicken
+  Co13 - Cottage Cheese Tortellini (contains egg)
+  Co16 - Shrimps in Garlic Butter
+  Co17 - Chilli Chicken
+  CozO - Schezwan Chicken
+  Cozz - Steamed Egg with Tofu
+  Coz4 - Kappa Ayala (contains fish)
+
+Rice Delight (7 removed):
+  rd1 - Chicken Biryani
+  rdz - Gosht Dum Biryani (contains mutton)
+  rd3 - Malabar Biryani (contains chicken)
+  rdG - Bengali Biryani (contains fish)
+  rd1z - Egg Biryani
+  rd17 - Keema Pulao
+
+Indian Cuisine (6 removed):
+  IC1z - Butter Chicken
+  ICzO - Kadhai Chicken
+  ICzz - Egg Curry
+  ICz3 - Jhinga Matar Curry (contains prawns)
+  ICz4 - Dum Tangri (contains chicken)
+
+Soup (4 removed):
+  so4 - Chicken Shorba
+  so1z - Chicken Soup
+  so13 - Tom Yum Kung (contains chicken)
+  sozO - Mutton Shorba
+
+Tandoor Se (3 removed):
+  ts1 - Grill Chicken
+  tsz - Chicken Lollipops
+  ts3 - Chicken Tikka
+
+Child's Favourite (2 removed):
+  CF1 - Omelette
+  CF8 - Bread Pudding (contains egg)
+
+Steam Cook (1 removed):
+  st1 - Keema Balls (contains chicken)
+
+
+BREAKDOWN BY INGREDIENT TYPE:
+------------------------------
+- Chicken: 17 recipes
+- Egg: 11 recipes
+- Fish: 10 recipes
+- Prawns/Shrimp: 3 recipes
+- Mutton: 2 recipes
+- Keema: 2 recipes
+- Crab: 1 recipe
+
+Note: The webapp now contains only 100% vegetarian recipes.
+All recipes containing meat, poultry, fish, seafood, and eggs have been removed.

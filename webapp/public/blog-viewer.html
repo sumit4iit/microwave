@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG Microwave Recipe Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .blog-nav {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .blog-nav select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .blog-content {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .blog-content h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .blog-content h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+
+        .blog-content h3 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        .blog-content h4 {
+            color: #555;
+            margin-top: 15px;
+        }
+
+        .blog-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .blog-content table th {
+            background: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .blog-content table td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+        }
+
+        .blog-content table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .blog-content table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+
+        .blog-content li {
+            margin: 5px 0;
+        }
+
+        .blog-content hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+            color: #666;
+            font-style: italic;
+            margin: 15px 0;
+        }
+
+        .blog-content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .blog-content strong {
+            color: #2c3e50;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #45a049;
+        }
+
+        @media print {
+            .blog-nav, .back-link, header, footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🥬 LG Microwave Recipes Blog</h1>
+            <p class="subtitle">Complete Recipe Collection in Markdown Format</p>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← Back to Recipe App</a>
+
+        <div class="blog-nav">
+            <select id="blogSelect">
+                <option value="">-- Select a blog to view --</option>
+                <option value="recipes-index.md" selected>📚 Recipe Index (Table of Contents)</option>
+                <option value="recipes-blog.md">📖 Complete Recipe Blog (All 204 Recipes)</option>
+                <optgroup label="Recipes by Category">
+                    <option value="blog/child-s-favourite.md">Child's Favourite (28 recipes)</option>
+                    <option value="blog/indian-cuisine.md">Indian Cuisine (22 recipes)</option>
+                    <option value="blog/health-plus.md">Health Plus (17 recipes)</option>
+                    <option value="blog/sweet-corner.md">Sweet Corner (17 recipes)</option>
+                    <option value="blog/continental.md">Continental (16 recipes)</option>
+                    <option value="blog/soup.md">Soup (16 recipes)</option>
+                    <option value="blog/chatpat-corner.md">Chatpat Corner (15 recipes)</option>
+                    <option value="blog/rice-delight.md">Rice Delight (14 recipes)</option>
+                    <option value="blog/salad.md">Salad (14 recipes)</option>
+                    <option value="blog/cooking-aid.md">Cooking Aid (13 recipes)</option>
+                    <option value="blog/steam-cook.md">Steam Cook (13 recipes)</option>
+                    <option value="blog/teadairy-delight.md">Tea/Dairy Delight (11 recipes)</option>
+                    <option value="blog/paneercurd.md">Paneer/Curd (4 recipes)</option>
+                    <option value="blog/bakery.md">Bakery (2 recipes)</option>
+                    <option value="blog/ghee.md">Ghee (1 recipe)</option>
+                    <option value="blog/tandoor-se.md">Tandoor Se (1 recipe)</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div id="blogContent" class="blog-content">
+            <div class="loading">
+                <p>Select a blog from the dropdown above to view recipes in markdown format.</p>
+                <p><strong>Tip:</strong> The complete blog contains all 204 recipes and may take a moment to load.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>LG Microwave Recipe Collection | 204 Vegetarian Recipes</p>
+            <p class="small">Markdown Blog Viewer | Powered by marked.js</p>
+        </div>
+    </footer>
+
+    <script>
+        const blogSelect = document.getElementById('blogSelect');
+        const blogContent = document.getElementById('blogContent');
+
+        // Configure marked options
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
+
+        blogSelect.addEventListener('change', async (e) => {
+            const selectedFile = e.target.value;
+
+            if (!selectedFile) {
+                blogContent.innerHTML = `
+                    <div class="loading">
+                        <p>Select a blog from the dropdown above to view recipes in markdown format.</p>
+                        <p><strong>Tip:</strong> The complete blog contains all 204 recipes and may take a moment to load.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Show loading state
+            blogContent.innerHTML = '<div class="loading"><p>Loading markdown content...</p></div>';
+
+            try {
+                // Fetch the markdown file
+                const response = await fetch(selectedFile);
+
+                if (!response.ok) {
+                    throw new Error(`Failed to load: ${response.status}`);
+                }
+
+                const markdown = await response.text();
+
+                // Convert markdown to HTML
+                const html = marked.parse(markdown);
+
+                // Display the rendered HTML
+                blogContent.innerHTML = html;
+
+                // Scroll to top
+                window.scrollTo(0, 0);
+
+            } catch (error) {
+                blogContent.innerHTML = `
+                    <div class="loading">
+                        <p style="color: red;">Error loading markdown file: ${error.message}</p>
+                        <p>Please try selecting a different file.</p>
+                    </div>
+                `;
+                console.error('Error loading markdown:', error);
+            }
+        });
+
+        // Check if a specific file is requested via URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const file = urlParams.get('file');
+        if (file) {
+            blogSelect.value = file;
+            blogSelect.dispatchEvent(new Event('change'));
+        } else {
+            // Load the default selected option (Recipe Index) on page load
+            blogSelect.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+</html>

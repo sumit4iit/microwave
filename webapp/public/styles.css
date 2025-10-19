@@ -1,0 +1,471 @@
+/* ===== CSS Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border-color: #dfe6e9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --lcd-bg: #1a1a1a;
+    --lcd-text: #7fff00;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== Controls Section ===== */
+.controls {
+    background: white;
+    padding: 2rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.search-box {
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.category-btn:hover {
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: white;
+}
+
+.category-btn.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.category-btn .count {
+    display: inline-block;
+    margin-left: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.results-info {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ===== Recipe Grid ===== */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.recipe-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--secondary-color);
+}
+
+.recipe-card .menu-code {
+    background: var(--lcd-bg);
+    color: var(--lcd-text);
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.recipe-card .recipe-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.recipe-card .category-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.recipe-card .weight-info {
+    margin-top: 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== Loading & No Results ===== */
+.loading-state,
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ===== Modal ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.modal-content {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    background: var(--border-color);
+    color: var(--text-color);
+}
+
+.recipe-detail {
+    padding: 2rem;
+}
+
+.recipe-detail .menu-code-large {
+    background: var(--lcd-bg);
+    color: var(--lcd-text);
+    font-family: 'Courier New', monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.recipe-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-detail .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+}
+
+.recipe-detail .meta-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.recipe-detail .meta-item strong {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.recipe-detail .utensils-list {
+    list-style: none;
+}
+
+.recipe-detail .utensils-list li::before {
+    content: "▸ ";
+    color: var(--secondary-color);
+}
+
+/* ===== Ingredient Table ===== */
+.ingredient-table-section {
+    margin: 2rem 0;
+}
+
+.ingredient-table-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.ingredient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    overflow-x: auto;
+    display: block;
+}
+
+.ingredient-table table {
+    width: 100%;
+    min-width: 600px;
+}
+
+.ingredient-table th,
+.ingredient-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+.ingredient-table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.ingredient-table tr:nth-child(even) {
+    background: var(--bg-color);
+}
+
+.ingredient-table .weight-limit-row {
+    background: #fffbea;
+    font-weight: 600;
+}
+
+/* ===== Steps Section ===== */
+.steps-section {
+    margin: 2rem 0;
+}
+
+.steps-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.steps-list {
+    counter-reset: step-counter;
+    list-style: none;
+}
+
+.steps-list li {
+    counter-increment: step-counter;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.steps-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--secondary-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ===== Notes Section ===== */
+.notes-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+}
+
+.notes-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.notes-section ul {
+    list-style: none;
+}
+
+.notes-section li::before {
+    content: "⚠️ ";
+}
+
+/* ===== Footer ===== */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer .small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 1rem;
+    }
+
+    .recipe-detail {
+        padding: 1rem;
+    }
+
+    .recipe-detail .menu-code-large {
+        font-size: 1.8rem;
+    }
+
+    .category-filters {
+        gap: 0.3rem;
+    }
+
+    .category-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .ingredient-table {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .controls,
+    header,
+    footer,
+    .modal-close {
+        display: none;
+    }
+
+    .modal {
+        position: static;
+        background: white;
+        padding: 0;
+    }
+
+    .recipe-detail {
+        padding: 1rem;
+    }
+}

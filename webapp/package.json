@@ -1,0 +1,16 @@
+{
+  "name": "lg-microwave-recipes",
+  "version": "1.0.0",
+  "description": "LG Microwave Recipe Webapp - 250 recipes from manual",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["microwave", "recipes", "lg"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

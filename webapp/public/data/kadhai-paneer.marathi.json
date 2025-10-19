@@ -1,0 +1,112 @@
+{
+  "menuCode": "IC2",
+  "name": "कढाई पनीर",
+  "weightLimit": "0.1 ~ 0.5 kg",
+  "utensils": [
+    "मायक्रोवेव्ह-सुरक्षित वाटी"
+  ],
+  "ingredientTable": {
+    "columns": [
+      "Weight-1",
+      "Weight-2",
+      "Weight-3",
+      "Weight-4",
+      "Weight-5"
+    ],
+    "weightLimits": [
+      "0.1 kg",
+      "0.2 kg",
+      "0.3 kg",
+      "0.4 kg",
+      "0.5 kg"
+    ],
+    "rows": [
+      {
+        "ingredient": "शिमला मिरची आणि कांदा (कापलेले)",
+        "quantities": [
+          "0.5 cup",
+          "1 cup",
+          "1.5 cups",
+          "2 cups",
+          "2.5 cups"
+        ]
+      },
+      {
+        "ingredient": "कांद्याची पेस्ट",
+        "quantities": [
+          "3 tbsps",
+          "4 tbsps",
+          "5 tbsps",
+          "6 tbsps",
+          "6.5 tbsps"
+        ]
+      },
+      {
+        "ingredient": "टोमॅटो प्युरी",
+        "quantities": [
+          "2 tbsps",
+          "3 tbsps",
+          "4 tbsps",
+          "4.5 tbsps",
+          "5 tbsps"
+        ]
+      },
+      {
+        "ingredient": "आलं-लसूण पेस्ट, मीठ आणि साखर",
+        "quantities": [
+          "As per taste",
+          "As per taste",
+          "As per taste",
+          "As per taste",
+          "As per taste"
+        ]
+      },
+      {
+        "ingredient": "लाल तिखट, हळद, कसुरी मेथी, गरम मसाला",
+        "quantities": [
+          "As per taste",
+          "As per taste",
+          "As per taste",
+          "As per taste",
+          "As per taste"
+        ]
+      },
+      {
+        "ingredient": "लोणी",
+        "quantities": [
+          "1.5 tbsps",
+          "2 tbsps",
+          "3 tbsps",
+          "3.5 tbsps",
+          "4 tbsps"
+        ]
+      },
+      {
+        "ingredient": "ताजी मलई",
+        "quantities": [
+          "1 tbsp",
+          "2 tbsps",
+          "3 tbsps",
+          "4 tbsps",
+          "5 tbsps"
+        ]
+      },
+      {
+        "ingredient": "तेल",
+        "quantities": [
+          "0.5 tbsp",
+          "1 tbsp",
+          "2 tbsps",
+          "2.5 tbsps",
+          "3 tbsps"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    "मायक्रोवेव्ह सेफ बाऊलमध्ये तेल, कांद्याची पेस्ट, आले-लसूण पेस्ट, चिरलेली ढोबळी मिरची आणि कांदा टाका. चांगले मिसळा, झाकून ठेवा. मेन्यू आणि वजन निवडा, त्यानंतर स्टार्ट दाबा.",
+    "बीप झाल्यावर, टोमॅटो प्युरी, बटर, फ्रेश क्रीम, हळद, लाल तिखट, गरम मसाला, कसुरी मेथी, मीठ, साखर आणि पनीरचे तुकडे घालून चांगले एकत्र करा आणि स्टार्ट बटण दाबा. ५ मिनिटे तसेच ठेवा. कोथिंबीरने सजवून गरमागरम सर्व्ह करा."
+  ],
+  "notes": [],
+  "category": "भारतीय पाककृती"
+}

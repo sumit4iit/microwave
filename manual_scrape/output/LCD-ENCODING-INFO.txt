@@ -1,0 +1,68 @@
+LG MICROWAVE LCD CHARACTER ENCODING
+====================================
+
+The LG microwave uses special characters on its LCD display to represent certain numbers.
+
+LCD CHARACTER MAPPING:
+----------------------
+LCD Char → Actual Number/Letter
+   O     →      0
+   Q     →      0
+   z     →      2
+   s     →      5
+   G     →      9
+   η     →      Gh (Greek eta displayed as Gh on seven-segment)
+
+EXAMPLES:
+---------
+Original LCD Code → Decoded Code → Recipe Name
+Coz1             → Co21           → Veg Manchurian
+HP1O             → HP10           → Spinach Dal
+HPG              → HP9            → Soyabean Curry
+CCz              → CC2            → Lemon Pickle
+HPs              → HP5            → Soya Idli
+ηh1              → Gh1            → Ghee
+sA1              → 5A1            → Rice Salad
+so3              → 5o3            → Wonton Soup
+
+DECODING STATISTICS:
+--------------------
+Total recipes: 204
+Codes decoded: 130 (63.7%)
+Remaining unchanged: 74 (36.3%)
+
+AFFECTED CATEGORIES:
+--------------------
+All categories had some codes that needed decoding, particularly:
+- Health Plus (HP)
+- Continental (Co)
+- Child's Favourite (CF)
+- Soup (5o - note the 5 instead of s)
+- Salad (5A - note the 5 instead of s)
+- Steam Cook (5t/5C)
+- Sweet Corner (5C)
+- Indian Cuisine (IC)
+- Rice Delight (rd)
+- Chatpat Corner (CC)
+- Tea/Dairy Delight (dd)
+- Paneer/Curd (PA/CU)
+- Cooking Aid (UC)
+- Tandoor Se (t5)
+
+WHY THIS ENCODING?
+------------------
+The LG microwave LCD display has limited character support, so it uses
+similar-looking letters to represent numbers:
+- 'O' looks like zero (0)
+- 'z' looks like 2 on LCD displays
+- 's' looks like 5 on LCD displays
+- 'G' looks like 9 on LCD displays
+
+WEBAPP UPDATE:
+--------------
+All menu codes in the webapp have been automatically decoded to show the
+actual numeric values (Co21 instead of Coz1) for better readability.
+
+Original data: manual_scrape/output/vegetarian-recipes.json
+Decoded data: manual_scrape/output/vegetarian-recipes-decoded.json
+Webapp uses: webapp/public/data/recipes.json (decoded version)

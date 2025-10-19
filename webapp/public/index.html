@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG Microwave Recipes - 204 Vegetarian Indian Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🥬 LG Microwave Recipes</h1>
+            <p class="subtitle">204 Delicious Vegetarian Indian Recipes at Your Fingertips</p>
+            <p class="subtitle" style="margin-top: 10px;">
+                <a href="blog-viewer.html" style="color: #4CAF50; text-decoration: underline;">📖 View Markdown Blog</a>
+            </p>
+        </div>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="controls">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by recipe name or menu code (e.g., HP1, Biryani)..."
+                    aria-label="Search recipes"
+                >
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">
+                    All Recipes <span class="count" id="count-all">0</span>
+                </button>
+            </div>
+
+            <!-- Results Count -->
+            <div class="results-info">
+                <span id="resultsCount">Loading recipes...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Grid -->
+    <main class="container">
+        <div id="recipeGrid" class="recipe-grid">
+            <!-- Recipe cards will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state">
+            <p>Loading recipes...</p>
+        </div>
+
+        <!-- No Results State -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No recipes found matching your search.</p>
+        </div>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div id="recipeModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
+
+            <div class="recipe-detail">
+                <!-- Recipe details will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>LG Microwave Recipe Collection | 204 Vegetarian Recipes</p>
+            <p class="small">Data extracted from LG Microwave Manual | 100% Vegetarian</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
