@@ -1,0 +1,27 @@
+{
+  "description": "List of non-vegetarian recipes to exclude from the recipe collection",
+  "nonVegRecipes": [
+    "Butter Chicken",
+    "Chicken Biryani",
+    "Chicken Lollipops",
+    "Chicken Shorba",
+    "Chicken Soup",
+    "Chicken Tikka",
+    "Chilli Chicken",
+    "Coconut Prawns",
+    "Egg Biryani",
+    "Egg Curry",
+    "Fish Bharta",
+    "Fish Cutlet",
+    "Fish Masala",
+    "Fish Pulusu",
+    "Grill Chicken",
+    "Kadhai Chicken",
+    "Lemon Chicken",
+    "Mutton Shorba",
+    "Schezwan Chicken",
+    "Steamed Egg with Tofu",
+    "Thai Chicken"
+  ],
+  "note": "This list is checked against recipe names during parsing to filter out non-vegetarian dishes"
+}

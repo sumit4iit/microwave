@@ -148,6 +148,18 @@ The MHTML parser (`process-all-categories.js`) uses:
 3. **Table extraction** to parse ingredient tables with variable columns
 4. **Pattern matching** on menuCode to auto-assign categories
 5. **LCD font handling** - The category mapper includes both `ts` and `t5` for Tandoor Se since the LCD display font makes 'S' look like '5' in some MHTML files
+6. **Vegetarian filtering** - Automatically filters out non-vegetarian recipes using `non-veg-dishes.json`
+
+### Non-Vegetarian Recipe Filtering
+
+The parser automatically excludes non-vegetarian recipes during extraction:
+
+- **Filter file**: `manual_scrape/non-veg-dishes.json` contains a list of 21 non-vegetarian recipe names
+- **Auto-filtering**: The parser loads this file and filters out matching recipes before saving
+- **Result**: Only vegetarian recipes (229 out of 250 total) are included in the final output
+- **Maintenance**: To exclude additional recipes, simply add their names to `non-veg-dishes.json`
+
+This ensures that every time recipes are regenerated from MHTML files, non-vegetarian dishes are automatically excluded.
 
 ### Known Limitations
 - No backend database - all data is static JSON

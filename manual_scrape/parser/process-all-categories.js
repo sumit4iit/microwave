@@ -5,6 +5,17 @@ const cheerio = require('cheerio');
 
 const SOURCE_DIR = path.join(__dirname, '../source');
 const OUTPUT_DIR = path.join(__dirname, '../output');
+const NON_VEG_FILE = path.join(__dirname, '../non-veg-dishes.json');
+
+// Load non-veg dishes list
+let nonVegDishes = [];
+try {
+  const nonVegData = JSON.parse(fsSync.readFileSync(NON_VEG_FILE, 'utf8'));
+  nonVegDishes = nonVegData.nonVegRecipes || [];
+  console.log(`Loaded ${nonVegDishes.length} non-vegetarian dishes to filter out`);
+} catch (err) {
+  console.warn('Warning: Could not load non-veg-dishes.json, skipping filtering');
+}
 
 /**
  * Decode MHTML quoted-printable encoding
@@ -276,14 +287,23 @@ async function main() {
     }
   }
 
+  // Filter out non-vegetarian dishes
+  const beforeFilterCount = allRecipes.length;
+  const filteredRecipes = allRecipes.filter(recipe => {
+    return !nonVegDishes.includes(recipe.name);
+  });
+  const removedCount = beforeFilterCount - filteredRecipes.length;
+
   console.log('\n' + '='.repeat(60));
   console.log('SUMMARY');
   console.log('='.repeat(60));
-  console.log(`Total recipes extracted: ${allRecipes.length}`);
+  console.log(`Total recipes extracted: ${beforeFilterCount}`);
+  console.log(`Non-vegetarian recipes filtered out: ${removedCount}`);
+  console.log(`Vegetarian recipes: ${filteredRecipes.length}`);
 
   // Count by category
   const byCategory = {};
-  allRecipes.forEach(r => {
+  filteredRecipes.forEach(r => {
     byCategory[r.category] = (byCategory[r.category] || 0) + 1;
   });
 
@@ -292,12 +312,12 @@ async function main() {
     console.log(`  ${cat.padEnd(25)} ${byCategory[cat]}`);
   });
 
-  // Save combined output
+  // Save combined output (vegetarian only)
   const outputPath = path.join(OUTPUT_DIR, 'all-recipes.json');
-  await fs.writeFile(outputPath, JSON.stringify(allRecipes, null, 2), 'utf-8');
+  await fs.writeFile(outputPath, JSON.stringify(filteredRecipes, null, 2), 'utf-8');
 
   console.log('\n' + '='.repeat(60));
-  console.log(`✓ Saved ${allRecipes.length} recipes to: ${path.basename(outputPath)}`);
+  console.log(`✓ Saved ${filteredRecipes.length} vegetarian recipes to: ${path.basename(outputPath)}`);
   console.log('='.repeat(60));
 }
 
