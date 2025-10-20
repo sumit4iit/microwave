@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const fsSync = require('fs');
 const path = require('path');
-const cheerio = require('../../backend/node_modules/cheerio');
+const cheerio = require('cheerio');
 
 const SOURCE_DIR = path.join(__dirname, '../source');
 const OUTPUT_DIR = path.join(__dirname, '../output');
@@ -199,6 +199,7 @@ function categorizeRecipes(recipes) {
     'Co': 'Continental',
     'SA': 'Salad',
     'ts': 'Tandoor Se',
+    't5': 'Tandoor Se',  // LCD font makes 'S' look like '5'
     'CF': "Child's Favourite",
     'st': 'Steam Cook',
     'sC': 'Steam Cook',

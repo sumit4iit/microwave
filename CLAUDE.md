@@ -147,6 +147,7 @@ The MHTML parser (`process-all-categories.js`) uses:
 2. **Cheerio** for HTML parsing and DOM traversal
 3. **Table extraction** to parse ingredient tables with variable columns
 4. **Pattern matching** on menuCode to auto-assign categories
+5. **LCD font handling** - The category mapper includes both `ts` and `t5` for Tandoor Se since the LCD display font makes 'S' look like '5' in some MHTML files
 
 ### Known Limitations
 - No backend database - all data is static JSON
