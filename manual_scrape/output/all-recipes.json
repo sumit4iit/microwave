@@ -83,7 +83,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPz",
+    "menuCode": "HP2",
     "name": "Karela Subzi",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -545,7 +545,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPG",
+    "menuCode": "HP9",
     "name": "Soyabean Curry",
     "weightLimit": "0.2 kg",
     "utensils": [
@@ -796,7 +796,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HP1z",
+    "menuCode": "HP12",
     "name": "Leaf Rolls",
     "weightLimit": "0.2 ~ 0.4 kg",
     "utensils": [
@@ -1156,7 +1156,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPz1",
+    "menuCode": "HP21",
     "name": "Crab Curry",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -1223,7 +1223,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPzz",
+    "menuCode": "HP22",
     "name": "Mase Kallavan",
     "weightLimit": "0.2 ~ 0.4 kg",
     "utensils": [
@@ -1333,7 +1333,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPz3",
+    "menuCode": "HP23",
     "name": "Veg Daliya Khichdi",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -1426,7 +1426,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPz4",
+    "menuCode": "HP24",
     "name": "Sabudana Khichdi",
     "weightLimit": "0.1 ~ 0.5 kg",
     "utensils": [
@@ -1508,7 +1508,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPzs",
+    "menuCode": "HP2s",
     "name": "Home Made Cereal",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -1593,7 +1593,7 @@
     "category": "Health Plus"
   },
   {
-    "menuCode": "HPz6",
+    "menuCode": "HP26",
     "name": "Khichdi",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -1734,7 +1734,7 @@
     "category": "Bakery"
   },
   {
-    "menuCode": "bAz",
+    "menuCode": "bA2",
     "name": "Muffins",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -2423,7 +2423,7 @@
     "category": "Chatpat Corner"
   },
   {
-    "menuCode": "CCz",
+    "menuCode": "CC2",
     "name": "Lemon Pickle",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -2810,7 +2810,7 @@
     "category": "Chatpat Corner"
   },
   {
-    "menuCode": "CCG",
+    "menuCode": "CC9",
     "name": "Aam Ki Chutney",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -3041,7 +3041,7 @@
     "category": "Chatpat Corner"
   },
   {
-    "menuCode": "CC1z",
+    "menuCode": "CC12",
     "name": "Chana Chaat",
     "weightLimit": "0.1 ~ 0.4 kg",
     "utensils": [
@@ -3361,7 +3361,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz",
+    "menuCode": "CF2",
     "name": "Corn Chaat",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -3882,7 +3882,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFG",
+    "menuCode": "CF9",
     "name": "Cheesy Nachos",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -4034,7 +4034,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CF1z",
+    "menuCode": "CF12",
     "name": "Noodles",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -4735,7 +4735,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFzO",
+    "menuCode": "CF2O",
     "name": "Steamed Triangles",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -4847,7 +4847,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz1",
+    "menuCode": "CF21",
     "name": "Khandvi",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -4922,7 +4922,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFzz",
+    "menuCode": "CF22",
     "name": "Namakparas",
     "weightLimit": "15 Nos.",
     "utensils": [
@@ -4982,7 +4982,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz3",
+    "menuCode": "CF23",
     "name": "Cottage Honey Toast",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -5035,7 +5035,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz4",
+    "menuCode": "CF24",
     "name": "Baked Potatoes",
     "weightLimit": "0.5 kg",
     "utensils": [
@@ -5142,7 +5142,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFzs",
+    "menuCode": "CF2s",
     "name": "Tokri Chaat",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -5199,7 +5199,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz6",
+    "menuCode": "CF26",
     "name": "Spicy Baby Corn",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -5313,7 +5313,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz7",
+    "menuCode": "CF27",
     "name": "Veg Sandwich",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -5390,7 +5390,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFz8",
+    "menuCode": "CF28",
     "name": "Paneer   Sandwich",
     "weightLimit": "0.1 ~  0.3 kg",
     "utensils": [
@@ -5468,7 +5468,7 @@
     "category": "Child's Favourite"
   },
   {
-    "menuCode": "CFzQ",
+    "menuCode": "CF2Q",
     "name": "Masala Cheese  Toast",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -5756,7 +5756,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Coz",
+    "menuCode": "Co2",
     "name": "Veg Au Gratin",
     "weightLimit": "0.2 kg",
     "utensils": [
@@ -6245,7 +6245,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "CoG",
+    "menuCode": "Co9",
     "name": "Potato Dumpling",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -6588,7 +6588,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Co1z",
+    "menuCode": "Co12",
     "name": "Spaghetti With Tomato Sauce",
     "weightLimit": "0.1 ~ 0.3Kg",
     "utensils": [
@@ -7225,7 +7225,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Co1G",
+    "menuCode": "Co19",
     "name": "Veg in Hot Garlic Sauce",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -7310,7 +7310,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Coz1",
+    "menuCode": "Co21",
     "name": "Veg Manchurian",
     "weightLimit": "0.6 kg",
     "utensils": [
@@ -7423,7 +7423,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Coz3",
+    "menuCode": "Co23",
     "name": "Almond and Vegetables Stir Fry",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -7558,7 +7558,7 @@
     "category": "Continental"
   },
   {
-    "menuCode": "Coz4",
+    "menuCode": "Co24",
     "name": "Kappa Ayala",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -7653,7 +7653,7 @@
     "category": "Cooking Aid"
   },
   {
-    "menuCode": "UCz",
+    "menuCode": "UC2",
     "name": "Defrost Veg",
     "weightLimit": "0.2 ~ 0.5 kg",
     "utensils": [
@@ -7969,7 +7969,7 @@
     "category": "Cooking Aid"
   },
   {
-    "menuCode": "UC1z",
+    "menuCode": "UC12",
     "name": "Crispy Nuts",
     "weightLimit": "0.1 kg",
     "utensils": [
@@ -8162,7 +8162,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz",
+    "menuCode": "IC2",
     "name": "Kadhai Paneer",
     "weightLimit": "0.1 ~ 0.5 kg",
     "utensils": [
@@ -8768,7 +8768,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICG",
+    "menuCode": "IC9",
     "name": "Dalma",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -9661,7 +9661,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "IC1G",
+    "menuCode": "IC19",
     "name": "Matar Paneer",
     "weightLimit": "0.2 - 0.4 kg",
     "utensils": [
@@ -9770,7 +9770,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz1",
+    "menuCode": "IC21",
     "name": "Kofta Curry",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -9881,7 +9881,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz3",
+    "menuCode": "IC23",
     "name": "Jhinga Matar Curry",
     "weightLimit": "0.2 - 0.4 kg",
     "utensils": [
@@ -9984,7 +9984,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz4",
+    "menuCode": "IC24",
     "name": "Dum Tangri",
     "weightLimit": "0.6 kg",
     "utensils": [
@@ -10106,7 +10106,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICzs",
+    "menuCode": "IC2s",
     "name": "Makki Korma",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -10215,7 +10215,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz6",
+    "menuCode": "IC26",
     "name": "Methi Aloo",
     "weightLimit": "0.2 ~ 0.4 kg",
     "utensils": [
@@ -10292,7 +10292,7 @@
     "category": "Indian Cuisine"
   },
   {
-    "menuCode": "ICz7",
+    "menuCode": "IC27",
     "name": "Kaddu Ki Sabzi",
     "weightLimit": "0.2 ~ 0.5 kg",
     "utensils": [
@@ -10423,7 +10423,7 @@
     "category": "Paneer/Curd"
   },
   {
-    "menuCode": "PAz",
+    "menuCode": "PA2",
     "name": "Masala Paneer",
     "weightLimit": "0.5 kg",
     "utensils": [
@@ -10508,7 +10508,7 @@
     "category": "Paneer/Curd"
   },
   {
-    "menuCode": "CUz",
+    "menuCode": "CU2",
     "name": "Flavoured Yoghurt",
     "weightLimit": "0.6 kg",
     "utensils": [
@@ -10561,7 +10561,7 @@
     "category": "Paneer/Curd"
   },
   {
-    "menuCode": "rdz",
+    "menuCode": "rd2",
     "name": "Gosht Dum Biryani",
     "weightLimit": "0.1 ~ 0.5 kg",
     "utensils": [
@@ -11350,7 +11350,7 @@
     "category": "Rice Delight"
   },
   {
-    "menuCode": "rdG",
+    "menuCode": "rd9",
     "name": "Bengali Biryani",
     "weightLimit": "0.1 ~ 0.5 kg",
     "utensils": [
@@ -12549,7 +12549,7 @@
     "category": "Rice Delight"
   },
   {
-    "menuCode": "rdzO",
+    "menuCode": "rd2O",
     "name": "Chilli Garlic Rice",
     "weightLimit": "0.2 ~ 0.5 kg",
     "utensils": [
@@ -12753,7 +12753,7 @@
     "category": "Other"
   },
   {
-    "menuCode": "sAz",
+    "menuCode": "sA2",
     "name": "Spring Basket Salad",
     "weightLimit": "0.1 - 0.3 kg",
     "utensils": [
@@ -13585,7 +13585,7 @@
     "category": "Other"
   },
   {
-    "menuCode": "sA1z",
+    "menuCode": "sA12",
     "name": "Peanut Salad",
     "weightLimit": "0.5 kg",
     "utensils": [
@@ -13761,7 +13761,7 @@
     "category": "Soup"
   },
   {
-    "menuCode": "soz",
+    "menuCode": "so2",
     "name": "Mushroom Soup",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -14212,7 +14212,7 @@
     "category": "Soup"
   },
   {
-    "menuCode": "soG",
+    "menuCode": "so9",
     "name": "Hot and Sour Soup",
     "weightLimit": "0.6 kg",
     "utensils": [
@@ -14913,7 +14913,7 @@
     "category": "Soup"
   },
   {
-    "menuCode": "so1G",
+    "menuCode": "so19",
     "name": "Limbu Dhania Shorba",
     "weightLimit": "0.6 kg",
     "utensils": [
@@ -15087,7 +15087,7 @@
     "category": "Steam Cook"
   },
   {
-    "menuCode": "stz",
+    "menuCode": "st2",
     "name": "Gajar Ka Halwa",
     "weightLimit": "0.3 kg",
     "utensils": [
@@ -15739,7 +15739,7 @@
     "category": "Steam Cook"
   },
   {
-    "menuCode": "st1z",
+    "menuCode": "st12",
     "name": "Steamed Peas",
     "weightLimit": "0.1 - 0.3 kg",
     "utensils": [
@@ -16072,7 +16072,7 @@
     "category": "Steam Cook"
   },
   {
-    "menuCode": "sCz",
+    "menuCode": "sC2",
     "name": "Besan Ladoo",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -16592,7 +16592,7 @@
     "category": "Steam Cook"
   },
   {
-    "menuCode": "sCG",
+    "menuCode": "sC9",
     "name": "Payasam",
     "weightLimit": "0.1 ~ 0.3 kg",
     "utensils": [
@@ -16782,7 +16782,7 @@
     "category": "Steam Cook"
   },
   {
-    "menuCode": "sC1z",
+    "menuCode": "sC12",
     "name": "Phirni",
     "weightLimit": "0.3 ~ 0.5 kg",
     "utensils": [
@@ -17312,7 +17312,7 @@
     "category": "Tea/Dairy Delight"
   },
   {
-    "menuCode": "ddz",
+    "menuCode": "dd2",
     "name": "Coffee",
     "weightLimit": "1-4 cups",
     "utensils": [
@@ -17800,7 +17800,7 @@
     "category": "Tea/Dairy Delight"
   },
   {
-    "menuCode": "ddG",
+    "menuCode": "dd9",
     "name": "Spiced Cider Tea",
     "weightLimit": "1-4 cups",
     "utensils": [

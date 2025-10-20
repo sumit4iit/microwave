@@ -42,7 +42,7 @@ function extractHTMLFromMHTML(mhtmlContent) {
 }
 
 /**
- * Extract menu code from LCD spans
+ * Extract menu code from LCD spans and fix LCD font rendering issues
  */
 function extractMenuCode($, h3Element) {
   const lcdSpans = $(h3Element).find('span.lcd');
@@ -50,6 +50,12 @@ function extractMenuCode($, h3Element) {
   lcdSpans.each((i, span) => {
     code += $(span).text();
   });
+
+  // Fix LCD font rendering issues where characters look similar
+  // z → 2 (lowercase z looks like 2 in LCD font)
+  // G → 9 (uppercase G looks like 9 in LCD font)
+  code = code.replace(/z/g, '2').replace(/G/g, '9');
+
   return code;
 }
 
