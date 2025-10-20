@@ -170,14 +170,22 @@ function updateResultsCount() {
 }
 
 // ===== Show Recipe Detail =====
+let currentRecipe = null;
+let currentStepIndex = 0;
+let wakeLock = null;
+
 function showRecipeDetail(menuCode) {
     const recipe = allRecipes.find(r => r.menuCode === menuCode);
     if (!recipe) return;
 
-    const modal = document.getElementById('recipeModal');
-    const detailContainer = modal.querySelector('.recipe-detail');
+    currentRecipe = recipe;
+    currentStepIndex = 0;
 
-    detailContainer.innerHTML = `
+    const modal = document.getElementById('recipeModal');
+    const fullRecipeView = document.getElementById('fullRecipeView');
+
+    // Render full recipe in the full recipe view container
+    fullRecipeView.innerHTML = `
         <div class="menu-code-large">${recipe.menuCode}</div>
         <h2>${recipe.name}</h2>
         <div class="category-badge">${recipe.category}</div>
@@ -206,6 +214,22 @@ function showRecipeDetail(menuCode) {
 
         ${renderNotes(recipe)}
     `;
+
+    // Setup cooking mode button
+    const cookingModeToggle = document.getElementById('cookingModeToggle');
+    const exitCookingMode = document.getElementById('exitCookingMode');
+    const prevStep = document.getElementById('prevStep');
+    const nextStep = document.getElementById('nextStep');
+
+    // Remove existing listeners
+    cookingModeToggle.replaceWith(cookingModeToggle.cloneNode(true));
+    const newToggle = document.getElementById('cookingModeToggle');
+
+    newToggle.addEventListener('click', enterCookingMode);
+
+    document.getElementById('exitCookingMode').addEventListener('click', exitCookingModeHandler);
+    document.getElementById('prevStep').addEventListener('click', () => navigateStep(-1));
+    document.getElementById('nextStep').addEventListener('click', () => navigateStep(1));
 
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -284,6 +308,119 @@ function renderNotes(recipe) {
 
 // ===== Close Modal =====
 function closeModal() {
+    exitCookingModeHandler(); // Exit cooking mode if active
     document.getElementById('recipeModal').style.display = 'none';
     document.body.style.overflow = 'auto';
 }
+
+// ===== Cooking Mode Functions =====
+function enterCookingMode() {
+    if (!currentRecipe || !currentRecipe.steps || currentRecipe.steps.length === 0) {
+        alert('This recipe has no steps to display.');
+        return;
+    }
+
+    currentStepIndex = 0;
+
+    // Hide full recipe view and toggle button
+    document.getElementById('fullRecipeView').classList.add('hidden');
+    document.getElementById('cookingModeToggle').style.display = 'none';
+
+    // Show cooking mode container
+    document.getElementById('cookingModeContainer').classList.add('active');
+
+    // Request wake lock to keep screen on
+    requestWakeLock();
+
+    // Render first step
+    renderCurrentStep();
+}
+
+function exitCookingModeHandler() {
+    // Show full recipe view and toggle button
+    document.getElementById('fullRecipeView').classList.remove('hidden');
+    document.getElementById('cookingModeToggle').style.display = 'flex';
+
+    // Hide cooking mode container
+    document.getElementById('cookingModeContainer').classList.remove('active');
+
+    // Release wake lock
+    releaseWakeLock();
+}
+
+function navigateStep(direction) {
+    if (!currentRecipe || !currentRecipe.steps) return;
+
+    const newIndex = currentStepIndex + direction;
+
+    if (newIndex < 0 || newIndex >= currentRecipe.steps.length) {
+        return; // Don't navigate beyond bounds
+    }
+
+    currentStepIndex = newIndex;
+    renderCurrentStep();
+}
+
+function renderCurrentStep() {
+    if (!currentRecipe || !currentRecipe.steps) return;
+
+    const steps = currentRecipe.steps;
+    const stepElement = document.getElementById('currentStep');
+    const progressElement = document.getElementById('cookingProgress');
+    const prevButton = document.getElementById('prevStep');
+    const nextButton = document.getElementById('nextStep');
+
+    // Update step content
+    stepElement.textContent = steps[currentStepIndex];
+
+    // Update progress
+    progressElement.textContent = `Step ${currentStepIndex + 1} of ${steps.length}`;
+
+    // Update button states
+    prevButton.disabled = currentStepIndex === 0;
+    nextButton.disabled = currentStepIndex === steps.length - 1;
+}
+
+// ===== Wake Lock API =====
+async function requestWakeLock() {
+    if ('wakeLock' in navigator) {
+        try {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake Lock active');
+
+            wakeLock.addEventListener('release', () => {
+                console.log('Wake Lock released');
+            });
+        } catch (err) {
+            console.error('Wake Lock error:', err);
+        }
+    }
+}
+
+function releaseWakeLock() {
+    if (wakeLock) {
+        wakeLock.release();
+        wakeLock = null;
+    }
+}
+
+// ===== Touch Debouncing =====
+let touchDebounceTimer = null;
+
+function debounceTouch(func, delay = 300) {
+    return function(...args) {
+        if (touchDebounceTimer) return;
+
+        func.apply(this, args);
+        touchDebounceTimer = setTimeout(() => {
+            touchDebounceTimer = null;
+        }, delay);
+    };
+}
+
+// Apply debouncing to navigation buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const debounceDelay = 300;
+
+    // Will be setup when recipe is shown
+});

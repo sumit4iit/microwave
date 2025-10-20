@@ -68,7 +68,39 @@
             <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
 
             <div class="recipe-detail">
-                <!-- Recipe details will be inserted here by JavaScript -->
+                <!-- Cooking Mode Toggle -->
+                <button class="cooking-mode-toggle" id="cookingModeToggle">
+                    <span>👨‍🍳</span>
+                    <span>Start Cooking Mode</span>
+                </button>
+
+                <!-- Cooking Mode Container -->
+                <div class="cooking-mode-container" id="cookingModeContainer">
+                    <div class="cooking-mode-header">
+                        <div class="cooking-progress" id="cookingProgress">Step 1 of 5</div>
+                        <button class="exit-cooking-mode" id="exitCookingMode">Exit Cooking Mode</button>
+                    </div>
+
+                    <div class="cooking-step" id="currentStep">
+                        <!-- Current step will be shown here -->
+                    </div>
+
+                    <div class="cooking-navigation">
+                        <button class="cooking-nav-btn prev" id="prevStep">
+                            <span>←</span>
+                            <span>Previous</span>
+                        </button>
+                        <button class="cooking-nav-btn next" id="nextStep">
+                            <span>Next</span>
+                            <span>→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Full Recipe View -->
+                <div class="full-recipe-view" id="fullRecipeView">
+                    <!-- Recipe details will be inserted here by JavaScript -->
+                </div>
             </div>
         </div>
     </div>
