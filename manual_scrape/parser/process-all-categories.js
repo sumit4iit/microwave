@@ -198,7 +198,8 @@ function categorizeRecipes(recipes) {
     'so': 'Soup',
     'Co': 'Continental',
     'SA': 'Salad',
-    'ts': 'Tandoor Se',
+    'tS': 'Tandoor Se',
+    'ts': 'Tandoor Se',  // Handle lowercase variant
     't5': 'Tandoor Se',  // LCD font makes 'S' look like '5'
     'CF': "Child's Favourite",
     'st': 'Steam Cook',
